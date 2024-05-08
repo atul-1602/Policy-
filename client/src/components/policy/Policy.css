@@ -1,0 +1,117 @@
+.policy-card {
+    display: flex;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-bottom: 30px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .policy-card:hover {
+    transform: translateY(-5px);  
+  }
+  
+  .doctor-photo {
+    flex: 1;
+    padding: 20px;
+    background: linear-gradient(135deg, #FF5F6D, #FFC371);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .doctor-photo img {
+    width: 100%;
+    max-width: 200px;
+    border-radius: 50%;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  .doctor-details {
+    flex: 2;
+    padding: 20px;
+  }
+  
+  .payment-details {
+    flex: 1;
+    padding: 20px;
+    background: #f9f9f9;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .payment-details h2 {
+    color: #FF5F6D;
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+  
+  .days-avlm {
+    margin-top: 10px;
+    font-size: 18px;
+  }
+  
+  .days-avlm span {
+    margin-right: 8px;
+    padding: 6px 12px;
+    background-color: #FF5F6D;
+    color: white;
+    border-radius: 20px;
+  }
+  
+  .confirmbook {
+    margin-top: 20px;
+  }
+  
+  .confirmbook form {
+    margin-top: 10px;
+  }
+  
+  .confirmbook label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 16px;
+    color: #555;
+  }
+  
+  .confirmbook input[type='date'],
+  .confirmbook input[type='time'] {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+  }
+  
+  .confirmbook p {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #888;
+  }
+  
+  .confirmbook input[type='submit'],
+  .confirmbook button {
+    padding: 14px 24px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .confirmbook input[type='submit'] {
+    background-color: #FF5F6D;
+    color: white;
+  }
+  
+  .confirmbook button {
+    background-color: #FFC371;
+    margin-right: 16px;
+  }
+  
+  .confirmbook button:hover {
+    background-color: #FFA07A;
+  }
+  
