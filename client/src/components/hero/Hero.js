@@ -2,7 +2,8 @@ import React, { useEffect, useState } from "react";
 import Doctor from '../../assests/doctor-picture.png'
 import './Hero.css'
 
-function Hero() {   
+
+const Hero = () => {
   const [goUp, setGoUp] = useState(false);
 
   const scrollToTop = () => {   
@@ -81,4 +82,5 @@ function Hero() {
   );
 }
 
-export default Hero;
+
+export default Hero

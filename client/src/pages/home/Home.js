@@ -2,12 +2,13 @@ import React from 'react'
 import Navbar from '../../components/navbar/Navbar'
 import Footer from '../../components/footer/Footer'
 import Hero from '../../components/hero/Hero'
-import './Home.css'
 import Info from '../../components/info/Info'
+import Doctors from '../../components/doctors/Doctors'
+import './Home.css'
 
 export const Home = () => {
-  return (
-    <div className='containe'>
+  return ( 
+    <div >
 
         <div className='navbar'>
         <Navbar/>
@@ -16,10 +17,11 @@ export const Home = () => {
         <div className='content'>
         <Hero/>
         <Info/> 
+        <Doctors/>
         </div>
 
         <div className='footer'>
-        <Footer/>
+        <Footer/>     
         </div>
 
     </div>
