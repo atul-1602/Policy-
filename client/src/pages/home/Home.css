@@ -1,10 +1,13 @@
 /* Home.css */
 
-/* .container {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh; Ensure the container takes up the full viewport height */
-/* } */
+.container {
+   display: flex;
+  width: 100%;
+  align-items: center;
+  min-height: 100vh;
+  height: 100%;
+
+}
 
 .navbar {
   width: 100%;
@@ -17,7 +20,7 @@
 
 content {
   flex: 1;
-  padding-top: 60px; /* Adjust this value based on the height of the navbar */
+  padding-top: 60px; 
   display: flex; /* Use flexbox to position components within the content */
   flex-direction: column; /* Stack components vertically */
   align-items: center; /* Center components horizontally */

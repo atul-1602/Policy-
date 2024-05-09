@@ -6,7 +6,7 @@ import './Hero.css'
 const Hero = () => {
   const [goUp, setGoUp] = useState(false);
 
-  const scrollToTop = () => {   
+  const scrollToTop = () => {     
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
