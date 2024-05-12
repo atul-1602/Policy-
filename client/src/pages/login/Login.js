@@ -1,38 +1,48 @@
 import React, { useState } from 'react';
 import './Login.css'
-
+import { useNavigate } from 'react-router-dom';
 const Login = () => {
-  const [isSignUp, setIsSignUp] = useState(false);
+  const navigate=useNavigate();
+  const [isSignUpActive, setIsSignUpActive] = useState(false);
 
   const handleSignUpClick = () => {
-    setIsSignUp(true);
+    setIsSignUpActive(true);
   };
 
   const handleSignInClick = () => {
-    setIsSignUp(false);
+    setIsSignUpActive(false);
   };
+ const handleAdminLogin=()=>{
+  localStorage.setItem("adminLoggedIn", "true");
+  navigate("/")
+  window.location.reload();
 
+ }
+ const handleUserLogin=()=>{
+  localStorage.setItem("userLoggedIn", "true");
+  navigate("/")
+  window.location.reload();
+
+ }
   return (
-    <div className={`container ${isSignUp ? 'right-panel-active' : ''}`} id="container-login">
-      <div>
+    <login className="login">
+
+    <div className={`container ${isSignUpActive ? "right-panel-active" : ""}`} id="container-login">
+      
         <div className="form-container sign-up-container">
           <form action="#">
             <h1>Request Demo</h1>
-            <input type="email" placeholder="Full Name" id="email" />
-            <span id="error-email"></span>
-            <input type="password" placeholder="Number" id="password" />
-            <span id="error-password"></span>
-            <button id="register">Request Demo</button>
+            <input type="text" placeholder="Full Name" id="email" />
+            <input type="tel" placeholder="Number" id="password" />
+            <button id="register" onClick={handleUserLogin}>Request Demo</button>
           </form>
         </div>
         <div className="form-container sign-in-container">
           <form action="#">
             <h1>Sign In</h1>
             <input type="email" placeholder="Email" id="login-email" />
-            <span id="login-error-email"></span>
             <input type="password" placeholder="Password" id="login-password" />
-            <span id="login-error-password"></span>
-            <button id="sign-in">Sign in</button>
+            <button id="sign-in" onClick={handleAdminLogin}>Sign in</button>
           </form>
         </div>
         <div className="overlay-container">
@@ -40,7 +50,7 @@ const Login = () => {
             <div className="overlay-panel overlay-left">
               <h1>Welcome Back!</h1>
               <p>To keep connected with us please login with your personal info</p>
-              <button className="ghost" onClick={handleSignInClick}>Sign In</button> 
+              <button className="ghost" onClick={handleSignInClick}>Sign In</button>
             </div>
             <div className="overlay-panel overlay-right">
               <h1>Hello!</h1>
@@ -49,8 +59,9 @@ const Login = () => {
             </div>
           </div>
         </div>
-      </div>
+     
     </div>
+    </login>
   );
 };
 

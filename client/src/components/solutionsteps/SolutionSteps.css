@@ -1,0 +1,32 @@
+/* Steps */
+
+.about-text-sTitle {
+    font-family: 'Rubik', sans-serif;
+    font-size: 1.2rem;
+    font-weight: bolder;
+    letter-spacing: .7px;
+}
+.about-text-description {
+    margin: 8px 24px;
+    font-weight: bold;
+    color: #4d4b4b;
+    font-family: 'Rubik', sans-serif;
+    letter-spacing: .7px;
+    line-height: 1.6rem;
+}
+.fa-icon {
+    color: #9D2553;
+}
+
+.info-title > h2 {
+    position: relative;
+}
+.info-title h2::before {
+    content: '';
+    position: absolute;
+    width: 30%;
+    height: 4px;
+    background-color: #9D2553;
+    border-radius: 8px;
+    bottom: -12px;
+}

@@ -13,17 +13,16 @@
     font-weight: bold;
     letter-spacing: .7px;
 }
-.dt-title > span {
+.dt-title > h2 {
     position: relative;
 }
-.dt-title span::before {
+.dt-title h2::before {
     content: '';
     position: absolute;
-    width: 64%;
+    width: 42%;
     height: 4px;
     background-color: #9D2553;
     border-radius: 8px;
-    left: 0;
     bottom: -12px;
 }
 .dt-description {

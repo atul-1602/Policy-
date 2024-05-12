@@ -9,14 +9,7 @@
 
 }
 
-.navbar {
-  width: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 1000;
-}
+
 
 content {
   flex: 1;
@@ -27,7 +20,3 @@ content {
   justify-content: center; /* Center components vertically */
 }
 
-.footer {
-  width: 100%;
-  margin-top : auto ; 
-}

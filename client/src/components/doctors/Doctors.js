@@ -1,8 +1,8 @@
 import React from "react";
-import profile1 from '../../assests/profile-1.png'
-import profile2 from "../../assests/profile-2.png";
-import profile3 from "../../assests/profile-3.png";
-import profile4 from "../../assests/profile-4.png";
+import profile1 from '../../assests/google.png'
+import profile2 from "../../assests/harley.png";
+import profile3 from "../../assests/jio.png";
+import profile4 from "../../assests/purple.png";
 import DoctorCard from "../doctorcard/DoctorCard";
 import './Doctors.css'
 
@@ -11,7 +11,7 @@ function Doctors() {
     <div className="doctor-section" id="doctors">
       <div className="dt-title-content">
         <h3 className="dt-title">
-          <span>Meet Our Partners</span>
+          <h2>Meet Our Partners</h2>
         </h3>
 
         <p className="dt-description">

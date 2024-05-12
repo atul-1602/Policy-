@@ -11,17 +11,16 @@
     font-size: 40px;
     font-weight: bold;
 }
-.info-title > span {
+.info-title > h2 {
     position: relative;
 }
-.info-title span::before {
+.info-title h2::before {
     content: '';
     position: absolute;
-    width: 75%;
+    width: 30%;
     height: 4px;
     background-color: #9D2553;
     border-radius: 8px;
-    left: 0;
     bottom: -12px;
 }
 .info-description {

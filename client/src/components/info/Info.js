@@ -1,12 +1,16 @@
 import React from "react";
 import InformationCard from "../../informationcard/InformationCard";
 import './Info.css'
+import {faTruckMedical} from 'react-fontawesome'
+import {faHeartPulse} from 'react-fontawesome'
+import {faTooth} from 'react-fontawesome'
+
 function Info() {
   return (
     <div className="info-section" id="services">
       <div className="info-title-content">
         <h3 className="info-title">
-          <span>What We Do</span>
+          <h2>What We Do</h2>
         </h3>
         <p className="info-description">
           We bring healthcare to your convenience, offering a comprehensive
@@ -25,7 +29,7 @@ function Info() {
             any medical concern that requires immediate attention, our team of
             dedicated healthcare professionals is available 24/7 to provide
             prompt and efficient care."
-        //   icon={faTruckMedical}
+          icon={faTruckMedical}
         />
 
         <InformationCard
@@ -35,7 +39,7 @@ function Info() {
             design personalized treatment plans. From comprehensive screenings
             to advanced interventions, we are committed to helping you maintain
             a healthy heart and lead a fulfilling life."
-        //   icon={faHeartPulse}
+          icon={faHeartPulse}
         />
 
         <InformationCard
@@ -44,7 +48,7 @@ function Info() {
             oral health needs. Our skilled dentists provide a wide range of
             treatments, from routine check-ups and cleanings to cosmetic
             procedures and restorative treatments."
-        //   icon={faTooth}
+          icon={faTooth}
         />
       </div>
     </div>

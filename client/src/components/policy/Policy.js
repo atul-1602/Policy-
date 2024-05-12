@@ -1,77 +1,87 @@
-import React, { useState } from 'react';
-import './Policy.css'; 
+import React, { useState, useEffect } from "react"; // Combined import
+import { connect } from "react-redux";
+import { loadDataSuccess } from "../../redux/action/Action";
+import Rating from "@mui/material/Rating";
 
+import "./Policy.css";
 
-const Policy = () => {
+const Policy = ({ loadDataSuccess, insuranceData }) => {
   const [showBooking, setShowBooking] = useState(false);
-  const [selectedDate, setSelectedDate] = useState('');
-  const [selectedTime, setSelectedTime] = useState('');
+  const [selectedDate, setSelectedDate] = useState("");
+  const [selectedTime, setSelectedTime] = useState("");
 
   const handleConfirmBooking = (e) => {
     e.preventDefault();
     // Handle booking confirmation logic here
-    console.log('Booking confirmed for', selectedDate, 'at', selectedTime);
+    console.log("Booking confirmed for", selectedDate, "at", selectedTime);
     // Reset selected date and time
-    setSelectedDate('');
-    setSelectedTime('');
+    setSelectedDate("");
+    setSelectedTime("");
     // Hide booking section
     setShowBooking(false);
   };
+  console.log(insuranceData);
+
+  useEffect(() => {
+    // Load data from JSON file
+    fetch("data.json")
+      .then((response) => response.json())
+      .then((data) => loadDataSuccess(data))
+      .catch((error) => console.error("Error loading data:", error));
+  }, []); // Removed loadDataSuccess from dependency array
+
+  if (!insuranceData) {
+    return <div>Loading...</div>;
+  }
 
   return (
-    <div className="policy-card">
-      <div className="doctor-photo">
-        <img src="images/images.jpeg" alt="Policy Image" />
-        <div className="none" id="bookadd">
-          <p>At <b>Cannot Place.</b> </p>
-          <p><i className="fa fa-map-marker"></i> <b>Delhi</b></p>
-        </div>
-      </div>
-      <div className="doctor-details">
-        <h1>Mast Wail Policy</h1>
-        <p><b>Policy Company</b></p>
-        <p>Policy Featues yaha likho</p>
-        <p>Validity Years of Policy</p>
-        <div className="days-avlm">
-          <span>M</span>
-          <span>T</span>
-          <span>W</span>
-          <span>T</span>
-          <span>F</span>
-          <span>S</span>
-        </div>
-        <h2 id="bookp" className="none">&#x20b9; 499/-</h2>
-      </div>
-      <div className="payment-details">
-        <p>At <b>Cannot Place.</b> </p>
-        <p><i className="fa fa-map-marker"></i> <b>Delhi</b></p>
-        <h2>&#x20b9; 499/-</h2>
-        <div id="bookbtn6">
-          <button onClick={() => setShowBooking(true)}>
-            Book Policy<p>No Booking Fee</p>
-          </button>
-        </div>
-        {showBooking && (
-          <div id="booksec6" className="confirmbook">
-            <h2>Select Date and Time of Booking</h2>
-            <form onSubmit={handleConfirmBooking}>
-              <label htmlFor="date">Select Date</label>
-              <input type="date" id="date" name="date" value={selectedDate} onChange={(e) => setSelectedDate(e.target.value)} required />
-              <br />
-              <label htmlFor="time">Select Time</label>
-              <input type="time" id="time" name="time" value={selectedTime} onChange={(e) => setSelectedTime(e.target.value)} required />
-              <br />
-              <p>*Booking Confirmation will be sent to phone of 15 minutes, +/- 30 minutes.</p>
-              <div>
-                <input type="submit" value="CONFIRM" id="submit" />
-                <button onClick={() => setShowBooking(false)}>CANCEL</button>
-              </div>
-            </form>
-          </div>
-        )}
-      </div>
-    </div>
+    <>
+      {insuranceData.map((insurance, index) => (
+        <card className="policy-card">
+          <section className="left-section">
+            <img src={insurance.image} />
+            <p> <span>Company :</span> {insurance.compnay_name}</p>
+            <Rating
+              name="half-rating"
+              defaultValue={2.5}
+              precision={0.5}
+              style={{ color: "blue" }}
+            />
+          </section>
+          <section className="right-section">
+            <div className="buynow">
+              <h2> {insurance.insurance_name}</h2>
+              <h3>Type : {insurance.type}</h3>
+              <h1>At Just -  <span>{insurance.rupees}</span> <span>/ p.m</span></h1>
+              <button className="btn">
+                <span>Buy Policy</span>
+              </button>
+            </div>
+            <hr />
+            <div className="details">
+              <h4>Documents-</h4>
+              <ul>
+                <li>{insurance.document_list}</li>
+              </ul>
+
+              <h4>For - {insurance.time_period} years</h4>
+              <button className="details-btn" >
+                <span>View More</span>
+              </button>
+            </div>
+          </section>
+        </card>
+      ))}
+    </>
   );
 };
 
-export default Policy;
+const mapStateToProps = (state) => ({
+  insuranceData: state.data,
+});
+
+const mapDispatchToProps = {
+  loadDataSuccess,
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Policy);

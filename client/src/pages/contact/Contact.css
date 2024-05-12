@@ -1,0 +1,106 @@
+.ContactForm{ 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+.why-we{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 80%;
+  margin-top: 3rem;
+  margin-bottom: 4rem;
+}
+.contact-img img{
+  height: 40rem;
+  width:40rem;
+  box-shadow: 0px 0px 10px rgba(128, 128, 128, 0.5); 
+}
+.contact-content{
+ margin-left: 2rem;
+}
+
+.why-we h1{
+   font-size: 2rem;
+   font-weight: 800;
+   text-align: justify;
+   color:  #FF5F6D;
+}
+.why-we p{
+  line-height: 1.2;
+   font-size: 1.5rem;
+   font-weight: 500;
+   text-align: justify;
+}
+
+.contactContainer {
+    padding: 20px;
+    color: #fff;
+    align-items: center;
+    width: 80rem;
+  }
+  
+  .App {
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  form {
+    margin-top: 20px;
+    align-items: center;
+    display: inline;
+  }
+  
+  .formRow {
+    margin-bottom: 10px;
+    align-items: center;
+    margin-left: 180px;
+    margin-right: 180px;
+  }
+  
+  .formInput {
+    padding: 15px;
+    width: 75%; 
+    border: 0.5px solid #fff;
+    /* color: #fff; */
+    margin-top: 20px;
+    border-radius: 5px;
+    align-items: center;
+    transition: border-color 0.3s ease;
+  }
+  
+  .formInput:focus {
+    border-color: #f45532;
+  }
+  
+  .errorMessage {
+    color: #f45532;
+    font-size: 14px;
+    margin-top: 5px;
+  }
+  
+  .submit-btn {
+    align-self: center;
+    padding: 15px 0;
+    margin-top: 20px;
+    margin-left: 450px;
+    margin-right: 180px;
+    width: 30%; /* Take full width with some padding */
+    border: none;
+    background-color: #f45532;
+    color: #fff;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .submit-btn:hover {
+    background-color: #dc3c17;
+  }
+  
+  
+  

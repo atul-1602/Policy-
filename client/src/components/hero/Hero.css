@@ -1,5 +1,5 @@
 .hero-section {
-    padding: 32px;
+    padding: 90px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -9,13 +9,13 @@
 /* Text section */
 .text-section {
     width: 60%;
-    padding: 0 32px;
+    padding: 0 32px;         
 }
 .text-headline {
     margin-bottom: 12px;
     color: rgb(77, 75, 75);
     font-family: 'Rubik', sans-serif;
-    font-size: 22px;
+    font-size: 22px;    
     font-weight: bold;
     letter-spacing: .7px;
 }
@@ -116,7 +116,7 @@
     .text-section {
         width: 100%;
         padding: 0;
-    }
+    }  
     .text-title, .text-descritpion {
         width: 100%;
     }

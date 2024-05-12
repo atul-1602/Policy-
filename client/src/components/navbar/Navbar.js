@@ -1,162 +1,97 @@
-import * as React from 'react';
-import AppBar from '@mui/material/AppBar';
-import Box from '@mui/material/Box';
-import Toolbar from '@mui/material/Toolbar';
-import IconButton from '@mui/material/IconButton';
-import Typography from '@mui/material/Typography';
-import Menu from '@mui/material/Menu';
-import MenuIcon from '@mui/icons-material/Menu';
-import Container from '@mui/material/Container';
-import Avatar from '@mui/material/Avatar';
-import Button from '@mui/material/Button';
-import Tooltip from '@mui/material/Tooltip';
-import MenuItem from '@mui/material/MenuItem';
-import AdbIcon from '@mui/icons-material/Adb';
-
-const pages = ['Products', 'Pricing', 'Blog'];
-const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
+import * as React from "react";
+import AppBar from "@mui/material/AppBar";
+import Toolbar from "@mui/material/Toolbar";
+import Typography from "@mui/material/Typography";
+import Container from "@mui/material/Container";
+import Button from "@mui/material/Button";
+import { Link } from "react-router-dom";
+import Cart from "../cart/Cart";
 
 function Navbar() {
-  const [anchorElNav, setAnchorElNav] = React.useState(null);
-  const [anchorElUser, setAnchorElUser] = React.useState(null);
+  const [userLoggedIn, setUserLoggedIn] = React.useState(localStorage.getItem('userLoggedIn') === "true");
+  const [adminLoggedIn, setAdminLoggedIn] = React.useState(localStorage.getItem('adminLoggedIn') === "true");
 
-  const handleOpenNavMenu = (event) => {
-    setAnchorElNav(event.currentTarget);
-  };
-  const handleOpenUserMenu = (event) => {
-    setAnchorElUser(event.currentTarget);
-  };
+  console.log(localStorage.getItem('userLoggedIn'));
+  console.log(localStorage.getItem('adminLoggedIn'));
+  console.log(adminLoggedIn);
+  console.log(userLoggedIn);
 
-  const handleCloseNavMenu = () => {
-    setAnchorElNav(null);
-  };
-
-  const handleCloseUserMenu = () => {
-    setAnchorElUser(null);
+  const handleLogout = () => {
+    localStorage.setItem("adminLoggedIn", "false");
+    localStorage.setItem("userLoggedIn", "false");
+    setAdminLoggedIn(false);
+    setUserLoggedIn(false);
+    window.location.href = "/login";
   };
 
   return (
-    <AppBar position="sticky" style={{ top: 0, zIndex: 1000, width: '100%' }}>
+    <>
+    <AppBar position="sticky" style={{ top: 0, zIndex: 1000, width: "100%" }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
           <Typography
             variant="h6"
             noWrap
             component="a"
-            href="#app-bar-with-responsive-menu"
+            href="/"
             sx={{
               mr: 2,
-              display: { xs: 'none', md: 'flex' },
-              fontFamily: 'monospace',
+              display: { xs: "none", md: "flex" },
+              fontFamily: "monospace",
               fontWeight: 700,
-              letterSpacing: '.3rem',
-              color: 'inherit',
-              textDecoration: 'none',
+              letterSpacing: ".3rem",
+              color: "inherit",
+              textDecoration: "none",
             }}
-          >
-            LOGO
+            >
+            Policy <span >+</span>
+
           </Typography>
 
-          <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
-            <IconButton
-              size="large"
-              aria-label="account of current user"
-              aria-controls="menu-appbar"
-              aria-haspopup="true"
-              onClick={handleOpenNavMenu}
-              color="inherit"
-            >
-              <MenuIcon />
-            </IconButton>
-            <Menu
-              id="menu-appbar"
-              anchorEl={anchorElNav}
-              anchorOrigin={{
-                vertical: 'bottom',
-                horizontal: 'left',
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: 'top',
-                horizontal: 'left',
-              }}
-              open={Boolean(anchorElNav)}
-              onClose={handleCloseNavMenu}
-              sx={{
-                display: { xs: 'block', md: 'none' },
-              }}
-            >
-              {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
-                </MenuItem>
-              ))}
-            </Menu>
-          </Box>
-          <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
-          <Typography
-            variant="h5"
-            noWrap
-            component="a"
-            href="#app-bar-with-responsive-menu"
-            sx={{
-              mr: 2,
-              display: { xs: 'flex', md: 'none' },
-              flexGrow: 1,
-              fontFamily: 'monospace',
-              fontWeight: 700,
-              letterSpacing: '.3rem',
-              color: 'inherit',
-              textDecoration: 'none',
-            }}
-          >
-            LOGO
-          </Typography>
-          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-            {pages.map((page) => (
-              <Button
-                key={page}
-                onClick={handleCloseNavMenu}  
-                sx={{ my: 2, color: 'white', display: 'block' }}
-              >
-                {page}
+          <Link to="/">
+            <Button style={{ color: "white", marginLeft: "80px" }}>Home</Button>
+          </Link>
+          <Link to="/policies">
+            <Button style={{ color: "white", marginLeft: "40px" }}>Policies</Button>
+          </Link>
+          <Link to="/about">
+            <Button style={{ color: "white", marginLeft: "40px" }}>About Us</Button>
+          </Link>
+          <Link to="/contact">
+            <Button style={{ color: "white", marginLeft: "40px" }}>Contact</Button>
+          </Link>
+
+          {userLoggedIn && (
+            <>
+              <Button style={{ color: "white", marginLeft: "400px" }}> Welcome back Atul !</Button>
+              <Button variant="contained" color="error" style={{ marginLeft: "10px" }} onClick={handleLogout}>
+                Logout
               </Button>
-            ))}
-          </Box>
+              <Cart/>
+            </>
+          )}
 
-          <Box sx={{ flexGrow: 0 }}>
-            <Tooltip title="Open settings">
-              <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
-              </IconButton>
-            </Tooltip>
-            <Menu
-              sx={{ mt: '45px' }}
-              id="menu-appbar"
-              anchorEl={anchorElUser}
-              anchorOrigin={{
-                vertical: 'top',
-                horizontal: 'right',
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: 'top',
-                horizontal: 'right',
-              }}
-              open={Boolean(anchorElUser)}
-              onClose={handleCloseUserMenu}
-            >
-              {settings.map((setting) => (
-                <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                  <Typography textAlign="center">{setting}</Typography>
-                </MenuItem>
-              ))}
-            </Menu>
-          </Box>
+          {adminLoggedIn && (
+            <>
+              <Button style={{ color: "white", marginLeft: "400px" }}> Welcome back Admin !</Button>
+              <Button variant="contained" color="error" style={{ color: "white", marginLeft: "10px" }} onClick={handleLogout}>
+                Logout
+              </Button>
+              <Cart/>
+            </>
+          )}
+
+          {!adminLoggedIn && !userLoggedIn && (
+            <Link to="/login">
+              <Button style={{ color: "white", marginLeft: "600px" }}>Login</Button>
+            </Link>
+          )}
+    
         </Toolbar>
       </Container>
     </AppBar>
+          </>
   );
 }
+
 export default Navbar;

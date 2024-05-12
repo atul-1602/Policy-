@@ -1,0 +1,202 @@
+[
+  {
+    "id": 1,
+    "compnay_name": "Alikee",
+    "insurance_name": "Abrahamowitcz",
+    "image": "https://img.freepik.com/free-vector/privacy-policy-concept-illustration_114360-7658.jpg?size=626&ext=jpg",
+    "time_period": 20,
+    "type": "Health insurance",
+    "document_list": "address proof",
+    "rupees": "899"
+  },
+  {
+    "id": 2,
+    "compnay_name": "Brandon",
+    "insurance_name": "Lermouth",
+    "image": "https://img.freepik.com/free-photo/cropped-view-businesswomen-reading-document_74855-4169.jpg?size=626&ext=jpg",
+    "time_period": 7,
+    "type": "Asset Insurance",
+    "document_list": "income certificate",
+    "rupees": "749"
+  },
+  {
+    "id": 3,
+    "compnay_name": "Elyssa",
+    "insurance_name": "Nutbrown",
+    "image": "https://img.freepik.com/free-vector/policy-insurance-icons_603843-478.jpg?size=626&ext=jpg",
+    "time_period": 5,
+    "type": "Term Insurance",
+    "document_list": "pan card",
+    "rupees": "899"
+  },
+  {
+    "id": 4,
+    "compnay_name": "Dorri",
+    "insurance_name": "Faulkner",
+    "image": "https://img.freepik.com/free-photo/polocies-compliance-operation-method-system_53876-121481.jpg?size=626&ext=jpg",
+    "time_period": 8,
+    "type": "Term Insurance",
+    "document_list": "aadhar Card",
+    "rupees": "749"
+  },
+  {
+    "id": 5,
+    "compnay_name": "Terrijo",
+    "insurance_name": "Diperaus",
+    "image": "https://img.freepik.com/free-photo/polocies-compliance-operation-method-system_53876-121481.jpg?size=626&ext=jpg",
+    "time_period": 14,
+    "type": "Travel Insurance",
+    "document_list": "address proof",
+    "rupees": "449"
+  },
+  {
+    "id": 6,
+    "compnay_name": "Tibold",
+    "insurance_name": "Goadsby",
+    "image": "https://img.freepik.com/free-photo/standard-quality-control-concept-m_23-2150041849.jpg?size=626&ext=jpg",
+    "time_period": 7,
+    "type": "Car Insurance",
+    "document_list": "pan card",
+    "rupees": "799"
+  },
+  {
+    "id": 7,
+    "compnay_name": "Ulla",
+    "insurance_name": "Tench",
+    "image": "https://img.freepik.com/free-photo/polocies-compliance-operation-method-system_53876-121481.jpg?size=626&ext=jpg",
+    "time_period": 4,
+    "type": "Health insurance",
+    "document_list": "pan card",
+    "rupees": "899"
+  },
+  {
+    "id": 8,
+    "compnay_name": "Wash",
+    "insurance_name": "Yerby",
+    "image": "https://img.freepik.com/free-photo/cropped-view-businesswomen-reading-document_74855-4169.jpg?size=626&ext=jpg",
+    "time_period": 5,
+    "type": "Car Insurance",
+    "document_list": "address proof",
+    "rupees": "599"
+  },
+  {
+    "id": 9,
+    "compnay_name": "Beverly",
+    "insurance_name": "Baldock",
+    "image": "https://img.freepik.com/free-vector/privacy-policy-concept-illustration_114360-7658.jpg?size=626&ext=jpg",
+    "time_period": 7,
+    "type": "Health insurance",
+    "document_list": "pan card",
+    "rupees": "749"
+  },
+  {
+    "id": 10,
+    "compnay_name": "Andra",
+    "insurance_name": "Mc Meekan",
+    "image": "https://img.freepik.com/free-vector/privacy-policy-concept-illustration_114360-7658.jpg?size=626&ext=jpg",
+    "time_period": 20,
+    "type": "Car Insurance",
+    "document_list": "income certificate",
+    "rupees": "899"
+  },
+  {
+    "id": 11,
+    "compnay_name": "Elinore",
+    "insurance_name": "McGlashan",
+    "image": "https://img.freepik.com/free-vector/privacy-policy-concept-illustration_114360-7658.jpg?size=626&ext=jpg",
+    "time_period": 5,
+    "type": "Travel Insurance",
+    "document_list": "address proof",
+    "rupees": "899"
+  },
+  {
+    "id": 12,
+    "compnay_name": "Star",
+    "insurance_name": "Waterdrinker",
+    "image": "https://img.freepik.com/free-vector/privacy-policy-concept-illustration_114360-7658.jpg?size=626&ext=jpg",
+    "time_period": 8,
+    "type": "Asset Insurance",
+    "document_list": "income certificate",
+    "rupees": "749"
+  },
+  {
+    "id": 13,
+    "compnay_name": "Engelbert",
+    "insurance_name": "Tullis",
+    "image": "https://img.freepik.com/free-vector/policy-insurance-icons_603843-478.jpg?size=626&ext=jpg",
+    "time_period": 14,
+    "type": "Travel Insurance",
+    "document_list": "pan card",
+    "rupees": ""
+  },
+  {
+    "id": 14,
+    "compnay_name": "Sherm",
+    "insurance_name": "Pincked",
+    "image": "https://img.freepik.com/free-vector/privacy-policy-concept-illustration_114360-7658.jpg?size=626&ext=jpg",
+    "time_period": 3,
+    "type": "Term Insurance",
+    "document_list": "aadhar Card",
+    "rupees": ""
+  },
+  {
+    "id": 15,
+    "compnay_name": "Kipp",
+    "insurance_name": "Chisman",
+    "image": "https://img.freepik.com/free-vector/policy-insurance-icons_603843-478.jpg?size=626&ext=jpg",
+    "time_period": 5,
+    "type": "Health insurance",
+    "document_list": "driving licence",
+    "rupees": "499"
+  },
+  {
+    "id": 16,
+    "compnay_name": "Shawnee",
+    "insurance_name": "Krystof",
+    "image": "https://img.freepik.com/free-vector/policy-insurance-icons_603843-478.jpg?size=626&ext=jpg",
+    "time_period": 14,
+    "type": "Car Insurance",
+    "document_list": "address proof",
+    "rupees": "799"
+  },
+  {
+    "id": 17,
+    "compnay_name": "Lance",
+    "insurance_name": "Lear",
+    "image": "https://img.freepik.com/free-photo/polocies-compliance-operation-method-system_53876-121481.jpg?size=626&ext=jpg",
+    "time_period": 3,
+    "type": "Term Insurance",
+    "document_list": "driving licence",
+    "rupees": ""
+  },
+  {
+    "id": 18,
+    "compnay_name": "Moria",
+    "insurance_name": "MacCawley",
+    "image": "https://img.freepik.com/free-photo/standard-quality-control-concept-m_23-2150041849.jpg?size=626&ext=jpg",
+    "time_period": 25,
+    "type": "Health insurance",
+    "document_list": "pan card",
+    "rupees": "749"
+  },
+  {
+    "id": 19,
+    "compnay_name": "Davon",
+    "insurance_name": "Stadding",
+    "image": "https://img.freepik.com/free-photo/standard-quality-control-concept-m_23-2150041849.jpg?size=626&ext=jpg",
+    "time_period": 14,
+    "type": "Car Insurance",
+    "document_list": "pan card",
+    "rupees": ""
+  },
+  {
+    "id": 20,
+    "compnay_name": "Vassily",
+    "insurance_name": "Wort",
+    "image": "https://img.freepik.com/free-photo/cropped-view-businesswomen-reading-document_74855-4169.jpg?size=626&ext=jpg",
+    "time_period": 8,
+    "type": "Health insurance",
+    "document_list": "pan card",
+    "rupees": "499"
+  }
+]
